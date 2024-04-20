@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class Gradecalculator {
     public static void main(String[] args) {
@@ -8,21 +8,15 @@ public class Gradecalculator {
         int numGrades = scanner.nextInt();
 
         int[] grades = new int[numGrades];
-
-        // Input grades
         for (int i = 0; i < numGrades; i++) {
             System.out.print("Enter grade " + (i + 1) + ": ");
             grades[i] = scanner.nextInt();
         }
-
-        // Calculate average grade
         int totalGrade = 0;
         for (int grade : grades) {
             totalGrade += grade;
         }
         double average = (double) totalGrade / numGrades;
-
-        // Display average grade
         System.out.println("Average Grade is: " + average);
 
         scanner.close();
